@@ -29,6 +29,7 @@
 }
 
 @property (nonatomic, weak) UIViewController *pViewController;
+@property (nonatomic, weak) UIViewController *tViewController;
 
 - (void)tableViewSetHeardView:(int)tyleNum;
 

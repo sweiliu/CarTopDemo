@@ -23,15 +23,16 @@
         buttonScrollView.showsVerticalScrollIndicator = NO;
 //        buttonScrollView.showsHorizontalScrollIndicator = NO;
         [self addSubview:buttonScrollView];
-        buttonScrollView.contentSize = CGSizeMake(90*6+28, 0);
+        buttonScrollView.contentSize = CGSizeMake(90*6+5, 0);
         buttonScrollView.delegate = self;
+        buttonScrollView.bounces = NO;
         _buttonScrollView = buttonScrollView;
         
         
         NSArray *lableArr = @[@"头条",@"新车",@"行业",@"导购",@"用车",@"头条客"];
         CGFloat x = 0;
         for (NSInteger index = 1; index < lableArr.count+1; index++) {
-            UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(x+28, 10, 50, 20)];
+            UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(x, 10, 50, 20)];
             [buttonScrollView addSubview:button];
             [button setTitle:lableArr[index-1] forState:UIControlStateNormal];
             button.titleLabel.font = [UIFont systemFontOfSize:16];
@@ -41,7 +42,7 @@
             x = 90*index;
         }
         
-        UIImageView *searchImageView = [[UIImageView alloc]initWithFrame:CGRectMake(W_SIZE-35, 0, 35, 40)];
+        UIImageView *searchImageView = [[UIImageView alloc]initWithFrame:CGRectMake(W_SIZE-35, 10, 25, 25)];
         searchImageView.userInteractionEnabled = YES;
         searchImageView.image = [UIImage imageNamed:@"fenleisousuo"];
         [self addSubview:searchImageView];
@@ -73,6 +74,6 @@
 - (void)updateTapBtn:(NSInteger)idx {
     UIButton *btn = (UIButton *)[self viewWithTag:1001 + idx];
     [btn setTitleColor:[UIColor blueColor] forState:UIControlStateSelected];
-    [_buttonScrollView setContentOffset:CGPointMake(idx*80, 0) animated:YES];
+    [_buttonScrollView setContentOffset:CGPointMake(idx*40, 0) animated:YES];
 }
 @end

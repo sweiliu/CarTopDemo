@@ -20,7 +20,7 @@
     
     NSArray *_dataArr;
 }
-@property (nonatomic,strong) UIViewController *viewController;
+@property (nonatomic,weak) UIViewController *viewController;
 
 - (void)imageHeardViewUpdateWithArr:(NSArray *)arr;
 

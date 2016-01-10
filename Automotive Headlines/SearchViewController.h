@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchViewControllerCell.h"
-@interface SearchViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate,UISearchDisplayDelegate>
+#import "Cell.h"
+@interface SearchViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UISearchResultsUpdating>
 {
 
-    NSMutableArray *_searchResultsArr;
+    NSMutableArray *_searchArr;
     NSArray *_dataArr;
     NSArray *_titleArr;
     
 }
 @property (nonatomic,strong) UITableView *tableView;
-@property (nonatomic,strong) UISearchBar *searchBar;
-@property (nonatomic,retain) UISearchDisplayController *searchDisplayController;
+@property (nonatomic,strong) UISearchController *searchController;
+
 @end

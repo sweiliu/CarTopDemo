@@ -30,15 +30,15 @@
     
     if (_webUrl != nil) {
         
-        NSMutableURLRequest *imageWebRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:_webUrl]];
+        NSMutableURLRequest *imageWebRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://m.qctt.cn/html/mobile/news_new/showapi5-%@.html",_webUrl]]];
         [webView loadRequest:imageWebRequest];
         
     }else{
 
-        NSMutableURLRequest *commentsWebRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://api.qctt.cn/qctt-api/5.0/index.php/Comment/getNewCommentList"]];
+        NSMutableURLRequest *commentsWebRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://api.qctt.cn/qctt-api/5.0/index.php/Comment/getCollect"]];
         [commentsWebRequest setHTTPMethod:@"POST"];
         
-        NSString *webUrlBody = [NSString stringWithFormat:@"page=0&news_id=%@&",_bodyStr];
+        NSString *webUrlBody = [NSString stringWithFormat:@"userId=0&newsId=%@",_bodyStr];
         NSData *bodyData = [webUrlBody dataUsingEncoding:NSUTF8StringEncoding];
         [commentsWebRequest setHTTPBody:bodyData];
         

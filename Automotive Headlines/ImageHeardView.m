@@ -33,10 +33,11 @@
 }
 
 - (void)goToWebAction {
-    
+    NSLog(@"点击图片");
+
     WebViewControllers *webView = [[WebViewControllers alloc]initWithWebUrl:nil andBodyStr:_bodyStr];
     
-    [self.viewController.navigationController pushViewController:webView animated:YES];
+    [_viewController.navigationController pushViewController:webView animated:YES];
     
 }
 - (void)imageHeardViewUpdateWithArr:(NSArray *)arr {

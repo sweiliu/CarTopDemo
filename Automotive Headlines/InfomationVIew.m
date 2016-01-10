@@ -8,53 +8,12 @@
 
 #import "InfomationVIew.h"
 #import "MainView.h"
+#import "ImageHeardView.h"
 #define NUM 9
 #define W_SIZE [UIScreen mainScreen].bounds.size.width
 #define H_SIZE [UIScreen mainScreen].bounds.size.height
-#define STATUS_Y 20
-//
-//
-//
-//@interface InfomationVIew ()<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate, ScorllImageViewDelegate, InfomationHearViewDelegate>
-//{
-//
-//    ScorllImageView *_scrollImageView00;
-//    
-//    NSArray *_imgArr;
-//    
-//    NSDictionary *imageDic;
-//    
-//    UIImageView *_imageView00;
-//    UIImageView *_imageView01;
-//    UIImageView *_imageView02;
-//    UIImageView *_imageView03;
-//    UIImageView *_imageView04;
-//    UIImageView *_imageView05;
-//    
-//    ViewControllers *_viewController01;
-//    ViewControllers *_viewController02;
-//    ViewControllers *_viewController03;
-//    ViewControllers *_viewController04;
-//    ViewControllers *_viewController05;
-//    
-//    UIImageView *_adversitementImageView;
-//    
-//    NSMutableArray *_dataArr;
-//    
-//    NSMutableArray *_viewsData;
-//    
-//    NSMutableURLRequest *_viewControllersRequest;
-//    
-//    NSString *_urlStr;
-//    
-//    InfomationHearView *_navigatonHeardView;
-//}
-//@property (nonatomic,strong) UITableView *mytableView;
-//@property (nonatomic,strong) UIScrollView *scrollView;
-//@property (nonatomic,strong) UIScrollView *scollImageView;
-//@property (nonatomic,strong) UILabel *titleLable;
-////
-//@end
+
+
 
 @implementation InfomationVIew
 
@@ -67,7 +26,7 @@
 
     [super viewDidLoad];
     
-    UIScrollView *mainView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 10, W_SIZE, H_SIZE)];
+    UIScrollView *mainView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0.1, W_SIZE, H_SIZE)];
     [self.view addSubview:mainView];
     mainView.delegate = self;
     mainView.pagingEnabled = YES;
@@ -78,7 +37,7 @@
     
     
     //导航栏设置
-    NavigationItemTitleView *navigationTitleView = [[NavigationItemTitleView alloc]initWithFrame:CGRectMake(0, 0, W_SIZE, 44)];
+    NavigationItemTitleView *navigationTitleView = [[NavigationItemTitleView alloc]initWithFrame:CGRectMake(0, 0, W_SIZE, 40)];
     self.navigationItem.titleView = navigationTitleView;
     self.navigationController.navigationBar.barTintColor = [UIColor groupTableViewBackgroundColor];
     navigationTitleView.delegate = self;
@@ -92,6 +51,7 @@
     [firstView tableViewSetHeardView:200];
     [mainView addSubview:firstView];
 
+    
     [self addViews];
     
 }

@@ -20,8 +20,7 @@
     tableView.delegate = self;
     tableView.showsVerticalScrollIndicator = NO;
     _tableView = tableView;
-
-    
+        _tViewController = _pViewController;
     [self setData];
     [self initData];
         
@@ -39,10 +38,12 @@
     _newsListData = [NSMutableArray array];
     _imageData = [NSMutableArray array];
     ImageHeardView *imageView = [[ImageHeardView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, 200)];
+
     _imageView = imageView;
     
     ScrollHeardView *scrollHearView = [[ScrollHeardView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, 200)];
     _scrollHeardView = scrollHearView;
+
     
     LastImageHeatView *lastImageHeardView = [[LastImageHeatView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, 235)];
     _lastImageHeardView = lastImageHeardView;
@@ -69,6 +70,8 @@
     
     cell.viewControllersWebView = _pViewController;
     [cell updateWithDic: _newsListData[indexPath.row]];
+    _imageView.viewController = _pViewController;
+    _scrollHeardView.viewController  = _pViewController;
     
     return cell;
 }

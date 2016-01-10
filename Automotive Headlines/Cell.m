@@ -58,9 +58,9 @@
 }
 - (void)goToWeb{
 
-    NSLog(@"hnfj");
+    NSLog(@"点击了cell");
     
-    WebViewControllers *webViewControllers = [[WebViewControllers alloc]initWithWebUrl:nil andBodyStr:_webUrlStr];
+    WebViewControllers *webViewControllers = [[WebViewControllers alloc]initWithWebUrl:_webUrlStr andBodyStr:nil];
     
     [_viewControllersWebView.navigationController pushViewController:webViewControllers animated:YES];
 

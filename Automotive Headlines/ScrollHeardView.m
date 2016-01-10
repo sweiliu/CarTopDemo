@@ -65,7 +65,7 @@
     
     WebViewControllers *webView = [[WebViewControllers alloc]initWithWebUrl:_webUrlStr andBodyStr:bodyStr];
     
-    [self.viewController.navigationController pushViewController:webView animated:YES];
+    [_viewController.navigationController pushViewController:webView animated:YES];
     
 }
 
