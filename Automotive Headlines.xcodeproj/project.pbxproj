@@ -27,6 +27,8 @@
 		18011BCE1C4357F900493C93 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011BBA1C4357F900493C93 /* UIScrollView+MJRefresh.m */; };
 		18011BCF1C4357F900493C93 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011BBC1C4357F900493C93 /* UIView+MJExtension.m */; };
 		18011BD21C43688300493C93 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011BD11C43688300493C93 /* EGORefreshTableHeaderView.m */; };
+		18011BD91C43973600493C93 /* CustomButton00.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011BD81C43973600493C93 /* CustomButton00.m */; };
+		18011BDC1C43A5F900493C93 /* CustomButton01.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011BDB1C43A5F900493C93 /* CustomButton01.m */; };
 		180DD1B81C312D4000E8EE5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DD1B71C312D4000E8EE5B /* main.m */; };
 		180DD1BB1C312D4000E8EE5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DD1BA1C312D4000E8EE5B /* AppDelegate.m */; };
 		180DD1C31C312D4000E8EE5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180DD1C21C312D4000E8EE5B /* Assets.xcassets */; };
@@ -93,6 +95,10 @@
 		18011BBC1C4357F900493C93 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		18011BD01C43688300493C93 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
 		18011BD11C43688300493C93 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		18011BD71C43973600493C93 /* CustomButton00.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton00.h; sourceTree = "<group>"; };
+		18011BD81C43973600493C93 /* CustomButton00.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton00.m; sourceTree = "<group>"; };
+		18011BDA1C43A5F900493C93 /* CustomButton01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton01.h; sourceTree = "<group>"; };
+		18011BDB1C43A5F900493C93 /* CustomButton01.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton01.m; sourceTree = "<group>"; };
 		180DD1B31C312D4000E8EE5B /* Automotive Headlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Automotive Headlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180DD1B71C312D4000E8EE5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		180DD1B91C312D4000E8EE5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -392,6 +398,10 @@
 				185DFFDD1C3FB0BB00A81E6C /* SearchViewControllerCell.m */,
 				18120CD21C40D6FD000737B6 /* SearchWebViewController.h */,
 				18120CD31C40D6FD000737B6 /* SearchWebViewController.m */,
+				18011BD71C43973600493C93 /* CustomButton00.h */,
+				18011BD81C43973600493C93 /* CustomButton00.m */,
+				18011BDA1C43A5F900493C93 /* CustomButton01.h */,
+				18011BDB1C43A5F900493C93 /* CustomButton01.m */,
 			);
 			name = "Custom Controls";
 			sourceTree = "<group>";
@@ -497,6 +507,7 @@
 				18011BC31C4357F900493C93 /* MJRefreshAutoNormalFooter.m in Sources */,
 				18FBF6591C3BD7DF00B36EFC /* WebViewControllers.m in Sources */,
 				1896AF331C3E243C0017D896 /* MainView.m in Sources */,
+				18011BD91C43973600493C93 /* CustomButton00.m in Sources */,
 				18011BCF1C4357F900493C93 /* UIView+MJExtension.m in Sources */,
 				18011BBD1C4357F900493C93 /* MJRefreshAutoFooter.m in Sources */,
 				18011BCC1C4357F900493C93 /* MJRefreshConst.m in Sources */,
@@ -504,6 +515,7 @@
 				180DD2BA1C391C7500E8EE5B /* MineViewControllerCell.m in Sources */,
 				18011BC91C4357F900493C93 /* MJRefreshNormalHeader.m in Sources */,
 				180DD1B81C312D4000E8EE5B /* main.m in Sources */,
+				18011BDC1C43A5F900493C93 /* CustomButton01.m in Sources */,
 				18FBF6301C3A6E8D00B36EFC /* Cell.m in Sources */,
 				180DD1DA1C312EB800E8EE5B /* ChooseCarView.m in Sources */,
 			);

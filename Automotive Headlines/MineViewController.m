@@ -41,8 +41,8 @@
     self.myTableView.showsVerticalScrollIndicator = NO;
     
     UIButton *signInButton = [[UIButton alloc]initWithFrame:CGRectMake(wSize-45, hSize-100, 40, 40)];
-    signInButton.backgroundColor = [UIColor redColor];
     [signInButton setTitle:@"签到" forState:UIControlStateNormal];
+    [signInButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.view addSubview:signInButton];
     
     TableHeardView *heardView = [[TableHeardView alloc]initWithFrame:CGRectMake(0, 0, wSize, 260)];
@@ -60,8 +60,8 @@
                 @[@{@"img":@"tougao",@"title":@"投稿"}],
                 @[@{@"img":@"qingchu",@"title":@"清除缓存"}],
                 @[@{@"img":@"aboutus",@"title":@"关于我们"},
-                  @{@"img":@"wode2",@"title":@"意见反馈"},
-                  @{@"img":@"wode2",@"title":@"免责声明"}]];
+                  @{@"img":@"fankui",@"title":@"意见反馈"},
+                  @{@"img":@"shengming",@"title":@"免责声明"}]];
     
     [self.myTableView reloadData];
 }

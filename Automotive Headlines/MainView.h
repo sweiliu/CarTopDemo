@@ -13,6 +13,7 @@
 #import "LastImageHeardView.h"
 
 
+
 @interface MainView : UIView<UITableViewDataSource,UITableViewDelegate> {
 
     UITableView *_tableView;
@@ -26,10 +27,14 @@
     ScrollHeardView *_scrollHeardView;
     
     LastImageHeatView *_lastImageHeardView;
+    
+    UIButton *_button;
 }
+
 
 @property (nonatomic, weak) UIViewController *pViewController;
 @property (nonatomic, weak) UIViewController *tViewController;
+
 
 - (void)tableViewSetHeardView:(int)tyleNum;
 
