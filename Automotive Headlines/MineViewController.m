@@ -9,12 +9,14 @@
 #import "MineViewController.h"
 #import "TableHeardView.h"
 #import "MineViewControllerCell.h"
-@interface MineViewController()<UITableViewDataSource,UITableViewDelegate>
+#import "MBProgressHUD.h"
+@interface MineViewController()<UITableViewDataSource,UITableViewDelegate,tableHeatdViewDelegate>
 {
     NSArray *_arr00;
     NSDictionary *_dic00;
     NSDictionary *_dic01;
     NSArray *_arr01;
+
 }
 @property (nonatomic,strong) UITableView *myTableView;
 @property (nonatomic,strong) NSArray *DataArr;
@@ -24,6 +26,11 @@
 
 @implementation MineViewController
 
+- (void)viewDidAppear:(BOOL)animated {
+
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 -(void)viewDidLoad{
 
     [super viewDidLoad];
@@ -31,7 +38,6 @@
     CGFloat wSize = [UIScreen mainScreen].bounds.size.width;
     CGFloat hSize = [UIScreen mainScreen].bounds.size.height;
     
-    self.navigationController.navigationBarHidden = YES;
     
     self.myTableView = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.view addSubview:self.myTableView];
@@ -47,8 +53,11 @@
     
     TableHeardView *heardView = [[TableHeardView alloc]initWithFrame:CGRectMake(0, 0, wSize, 260)];
     self.myTableView.tableHeaderView = heardView;
+    heardView.pViewController = self;
+    heardView.delegate = self;
 
-
+    
+    
 
     [self initData];
 }
@@ -98,5 +107,31 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
 
     return 10.f;
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    NSInteger section = indexPath.section;
+    
+
+    NSLog(@"点击了第%lu组的第%lu行",section);
+}
+
+#pragma mark = TableHeardViewDelegate
+
+- (void)shallowLable:(BOOL)BL {
+
+    if (BL == YES) {
+        MBProgressHUD *HUD = [[MBProgressHUD alloc]initWithFrame:CGRectMake(90, 200, 80, 20)];
+        [self.view addSubview:HUD];
+        HUD.mode = MBProgressHUDModeText;
+        HUD.labelText = @"还记得";
+        [HUD showAnimated:YES whileExecutingBlock:^{
+            sleep(3);
+        } completionBlock:^{
+            [HUD removeFromSuperview];
+            NSLog( @"这玩意毁了");
+        }];
+    }
 }
 @end

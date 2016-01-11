@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TableHeardView : UIView
+@protocol tableHeatdViewDelegate <NSObject>
 
+- (void)shallowLable:(BOOL)BL;
+
+@end
+
+@interface TableHeardView : UIView
+@property (nonatomic,weak) UIViewController *pViewController;
+@property (nonatomic,strong) id<tableHeatdViewDelegate> delegate;
 @end

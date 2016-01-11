@@ -29,6 +29,8 @@
 		18011BD21C43688300493C93 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011BD11C43688300493C93 /* EGORefreshTableHeaderView.m */; };
 		18011BD91C43973600493C93 /* CustomButton00.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011BD81C43973600493C93 /* CustomButton00.m */; };
 		18011BDC1C43A5F900493C93 /* CustomButton01.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011BDB1C43A5F900493C93 /* CustomButton01.m */; };
+		18011BDF1C43B9AC00493C93 /* MineWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011BDE1C43B9AC00493C93 /* MineWebViewController.m */; };
+		18011BE71C43DD8200493C93 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18011BE61C43DD8200493C93 /* MBProgressHUD.m */; };
 		180DD1B81C312D4000E8EE5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DD1B71C312D4000E8EE5B /* main.m */; };
 		180DD1BB1C312D4000E8EE5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 180DD1BA1C312D4000E8EE5B /* AppDelegate.m */; };
 		180DD1C31C312D4000E8EE5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180DD1C21C312D4000E8EE5B /* Assets.xcassets */; };
@@ -99,6 +101,10 @@
 		18011BD81C43973600493C93 /* CustomButton00.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton00.m; sourceTree = "<group>"; };
 		18011BDA1C43A5F900493C93 /* CustomButton01.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton01.h; sourceTree = "<group>"; };
 		18011BDB1C43A5F900493C93 /* CustomButton01.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton01.m; sourceTree = "<group>"; };
+		18011BDD1C43B9AC00493C93 /* MineWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineWebViewController.h; sourceTree = "<group>"; };
+		18011BDE1C43B9AC00493C93 /* MineWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineWebViewController.m; sourceTree = "<group>"; };
+		18011BE51C43DD8200493C93 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		18011BE61C43DD8200493C93 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		180DD1B31C312D4000E8EE5B /* Automotive Headlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Automotive Headlines.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		180DD1B71C312D4000E8EE5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		180DD1B91C312D4000E8EE5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -253,6 +259,15 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		18011BE41C43DD8200493C93 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				18011BE51C43DD8200493C93 /* MBProgressHUD.h */,
+				18011BE61C43DD8200493C93 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		180DD1AA1C312D4000E8EE5B = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +287,7 @@
 		180DD1B51C312D4000E8EE5B /* Automotive Headlines */ = {
 			isa = PBXGroup;
 			children = (
+				18011BE41C43DD8200493C93 /* MBProgressHUD */,
 				18011B901C4357F900493C93 /* MJRefresh */,
 				18FBF62A1C3A3EE800B36EFC /* Custom Controls */,
 				180DD1CD1C312DB500E8EE5B /* ControllerVIews */,
@@ -381,6 +397,8 @@
 			children = (
 				180DD2B81C391C7500E8EE5B /* MineViewControllerCell.h */,
 				180DD2B91C391C7500E8EE5B /* MineViewControllerCell.m */,
+				18011BDD1C43B9AC00493C93 /* MineWebViewController.h */,
+				18011BDE1C43B9AC00493C93 /* MineWebViewController.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -497,6 +515,7 @@
 				180DD2B61C39098A00E8EE5B /* ViewControllersCell.m in Sources */,
 				18011BBF1C4357F900493C93 /* MJRefreshComponent.m in Sources */,
 				18011BC11C4357F900493C93 /* MJRefreshHeader.m in Sources */,
+				18011BE71C43DD8200493C93 /* MBProgressHUD.m in Sources */,
 				180DD1D71C312EA400E8EE5B /* ChoiceView.m in Sources */,
 				18011BC21C4357F900493C93 /* MJRefreshAutoGifFooter.m in Sources */,
 				1896AF391C3E24BF0017D896 /* ImageHeardView.m in Sources */,
@@ -507,6 +526,7 @@
 				18011BC31C4357F900493C93 /* MJRefreshAutoNormalFooter.m in Sources */,
 				18FBF6591C3BD7DF00B36EFC /* WebViewControllers.m in Sources */,
 				1896AF331C3E243C0017D896 /* MainView.m in Sources */,
+				18011BDF1C43B9AC00493C93 /* MineWebViewController.m in Sources */,
 				18011BD91C43973600493C93 /* CustomButton00.m in Sources */,
 				18011BCF1C4357F900493C93 /* UIView+MJExtension.m in Sources */,
 				18011BBD1C4357F900493C93 /* MJRefreshAutoFooter.m in Sources */,
