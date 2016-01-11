@@ -33,7 +33,6 @@
     mainView.contentSize = CGSizeMake(6*W_SIZE, 0);
     mainView.contentOffset = CGPointMake(0, 0);
     _mainView = mainView;
-
     
     
     //导航栏设置
@@ -50,6 +49,7 @@
     firstView.pViewController = self;
     [firstView tableViewSetHeardView:200];
     [mainView addSubview:firstView];
+
 
     
     [self addViews];

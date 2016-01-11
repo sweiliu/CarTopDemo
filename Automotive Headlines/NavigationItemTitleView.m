@@ -51,6 +51,11 @@
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(pushSearchViewController)];
         [searchImageView addGestureRecognizer:tapGesture];
         
+        _scrollBarView = [[UIView alloc]initWithFrame:CGRectZero];
+        _scrollBarView.backgroundColor = [UIColor redColor];
+        [_buttonScrollView addSubview:_scrollBarView];
+        
+        
     }
     return self;
 }
@@ -65,6 +70,7 @@
 
 - (void)goToAction:(UIButton *)btn {
     [btn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+    [_scrollBarView setFrame:CGRectMake(btn.frame.origin.x, 40, 50, 2)];
     NSLog(@"点击了第 %lu 个按钮",btn.tag-1000);
     if (self.delegate && [self.delegate respondsToSelector:@selector(tapBtn:)]) {
         [self.delegate tapBtn:btn.tag - 1001];
@@ -73,7 +79,16 @@
 
 - (void)updateTapBtn:(NSInteger)idx {
     UIButton *btn = (UIButton *)[self viewWithTag:1001 + idx];
-    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateSelected];
-    [_buttonScrollView setContentOffset:CGPointMake(idx*40, 0) animated:YES];
+    
+    if (idx>3) {
+        [_buttonScrollView setContentOffset:CGPointMake(idx*40, 0)];
+        
+        [_scrollBarView setFrame:CGRectMake(btn.frame.origin.x, 40, 50, 2)];
+    }else {
+        [_scrollBarView setFrame:CGRectMake(btn.frame.origin.x, 40, 50, 2)];
+        [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [_buttonScrollView setContentOffset:CGPointMake(idx*20, 0)];
+    }
+
 }
 @end

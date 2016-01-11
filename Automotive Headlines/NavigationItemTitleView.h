@@ -20,6 +20,7 @@
 
 @property (nonatomic, weak) UIViewController *pViewController;
 
+@property (nonatomic,strong) UIView *scrollBarView;
 - (void)updateTapBtn:(NSInteger)idx;
 
 @end

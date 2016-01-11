@@ -10,11 +10,13 @@
 #import "ImageHeardView.h"
 #import "ScrollHeardView.h"
 #import "NavigationItemTitleView.h"
+#import "MJRefresh.h"
 
 @interface InfomationVIew : UIViewController<UIScrollViewDelegate,NavigationItemTitleViewDelegate> {
 
     UIScrollView *_mainView;
     NavigationItemTitleView *_navigationItemTitleView;
+
     
 }
 
