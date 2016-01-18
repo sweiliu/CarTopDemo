@@ -38,7 +38,7 @@
         UILabel *titleLable = [[UILabel alloc]initWithFrame:CGRectMake(0, frame.size.height-25, frame.size.width, 25)];
         [self addSubview:titleLable];
         titleLable.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
-        titleLable.font = [UIFont boldSystemFontOfSize:13];
+        titleLable.font = [UIFont boldSystemFontOfSize:15];
         _titleLable = titleLable;
         
     }
@@ -51,7 +51,7 @@
     
     NSDictionary *dic = _dataArr[_index];
     NSString *bodyStr;
-    NSString *resourceLoc =  dic[@"resourceLoc"];
+    NSString *resourceLoc = dic[@"resourceLoc"];
     
     int count = [resourceLoc intValue];
     if (count > 6) {
@@ -126,7 +126,8 @@
     _index = scrollView.contentOffset.x/scrollView.frame.size.width;
     
     NSDictionary *dic = _dataArr[_index];
-    _titleLable.text = dic[@"title"];
+    _titleLable.text = [NSString stringWithFormat:@"  %@",dic[@"title"]];
+    _titleLable.textColor = [UIColor whiteColor];
 }
 
 @end

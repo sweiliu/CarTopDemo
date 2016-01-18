@@ -21,7 +21,7 @@
         UILabel *titleLable = [[UILabel alloc]initWithFrame:CGRectMake(0, frame.size.height-25, frame.size.width, 25)];
         [self addSubview:titleLable];
         titleLable.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
-        titleLable.font = [UIFont boldSystemFontOfSize:13];
+        titleLable.font = [UIFont boldSystemFontOfSize:15];
         _titleLable = titleLable;
 
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(goToWebAction)];
@@ -42,8 +42,8 @@
 }
 - (void)imageHeardViewUpdateWithArr:(NSArray *)arr {
     
-    
-    _titleLable.text = [NSString stringWithFormat:@"%@",arr[0][@"title"]];
+    _titleLable.textColor = [UIColor whiteColor];
+    _titleLable.text = [NSString stringWithFormat:@"     %@",arr[0][@"title"]];
     
      _bodyStr = [NSString stringWithFormat:@"%@",arr[0][@"resourceLoc"]];
     

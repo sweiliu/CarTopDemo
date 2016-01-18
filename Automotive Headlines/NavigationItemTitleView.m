@@ -69,7 +69,7 @@
 }
 
 - (void)goToAction:(UIButton *)btn {
-    [btn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
+//    [btn setTitleColor:[UIColor yellowColor] forState:UIControlStateNormal];
     [_scrollBarView setFrame:CGRectMake(btn.frame.origin.x, 40, 50, 2)];
     NSLog(@"点击了第 %lu 个按钮",btn.tag-1000);
     if (self.delegate && [self.delegate respondsToSelector:@selector(tapBtn:)]) {
@@ -86,7 +86,6 @@
         [_scrollBarView setFrame:CGRectMake(btn.frame.origin.x, 40, 50, 2)];
     }else {
         [_scrollBarView setFrame:CGRectMake(btn.frame.origin.x, 40, 50, 2)];
-        [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         [_buttonScrollView setContentOffset:CGPointMake(idx*20, 0)];
     }
 
